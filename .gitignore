@@ -3,3 +3,4 @@
 .vscode
 /crop_faces/*
 .ipynb_checkpoints
+/crop_faces/.ipynb_checkpoints
