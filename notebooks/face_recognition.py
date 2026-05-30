@@ -13,9 +13,13 @@ pca_models = pickle.load(open('../model/pca_dict.pickle', mode='rb')) # pca dict
 model_pca = pca_models['pca']
 mean_face_array = pca_models['mean_face']
 
-def faceRecognitionPipeline(filepath):
+def faceRecognitionPipeline(filepath, path = True):
     # Step 01 - Read Image
-    img = cv2.imread(filepath)
+    if path:
+        img = cv2.imread(filepath)
+    else:
+        img = filepath # Array
+
 
     # Step 02 - Convert Image into gray Scale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
