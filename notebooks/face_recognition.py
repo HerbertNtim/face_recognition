@@ -75,4 +75,4 @@ def faceRecognitionPipeline(filepath):
     
         predictions.append(output)
 
-        return img, predictions
+    return img, predictions
